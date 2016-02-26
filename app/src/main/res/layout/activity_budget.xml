@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/budgetHeader"
+        android:layout_marginTop="30dp"
+        android:id="@+id/header_budget"
+        android:textSize="35dp"
+        android:layout_marginLeft="20dp"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/amt"
+        android:layout_marginTop="30dp"
+        android:id="@+id/amt"
+        android:textSize="25dp"
+        android:layout_marginLeft="20dp"
+        android:layout_below="@id/header_budget"
+        />
+    <EditText
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="0.00"
+        android:layout_toRightOf="@id/amt"
+        android:id="@+id/edt_amt"
+        android:textSize="25dp"
+        android:inputType="numberDecimal"
+        android:layout_marginRight="50dp"
+        android:layout_marginLeft="20dp"
+        android:layout_below="@id/header_budget"
+        />
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/start"
+        android:layout_marginTop="30dp"
+        android:id="@+id/start"
+        android:textSize="25dp"
+        android:layout_below="@id/amt"
+        android:layout_alignLeft="@id/amt"
+        />
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/start"
+        android:id="@+id/edt_start"
+        android:layout_marginTop="20dp"
+        android:textSize="25dp"
+        android:layout_below="@id/amt"
+        android:layout_alignLeft="@id/edt_amt"
+        android:layout_marginRight="50dp"
+        android:focusable="false"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/end"
+        android:layout_marginTop="30dp"
+        android:id="@+id/end"
+        android:textSize="25dp"
+        android:layout_below="@id/start"
+        android:layout_alignLeft="@id/amt"
+        />
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/end"
+        android:id="@+id/edt_end"
+        android:layout_marginTop="20dp"
+        android:layout_below="@id/start"
+        android:textSize="25dp"
+        android:layout_alignLeft="@id/edt_amt"
+        android:layout_marginRight="50dp"
+        android:focusable="false"
+        />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/end"
+        android:text="@string/reset"
+        android:layout_marginTop="30dp"
+        android:onClick="onReset"
+        android:id="@+id/reset"
+        android:textSize="25dp"
+        android:layout_marginLeft="80dp"
+        />
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/end"
+        android:layout_toRightOf="@id/reset"
+        android:text="@string/ok"
+        android:layout_marginTop="30dp"
+        android:onClick="onDone"
+        android:textSize="25dp"
+        android:id="@+id/button_done" />
+</RelativeLayout>

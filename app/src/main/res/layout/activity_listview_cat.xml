@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+    <TextView
+        android:id="@+id/cat_date_cat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:textSize="25dp"
+        android:text="Date"
+        />
+
+    <TextView
+        android:id="@+id/cat_amt_cat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="10dp"
+        android:textSize="25dp"
+        android:text="Amount"
+        android:layout_toRightOf="@id/cat_date_cat"
+        />
+
+    <TextView
+        android:id="@+id/cat_paid_cat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="10dp"
+        android:textSize="25dp"
+        android:layout_toRightOf="@id/cat_amt_cat"
+        android:text="Paid"
+        />
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/lv_lv_cat"
+        android:layout_below="@id/cat_amt_cat"
+        ></ListView>
+</RelativeLayout>

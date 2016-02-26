@@ -1,0 +1,132 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin" tools:context=".MainActivity"
+    android:background="@android:color/black"
+    >
+
+    <TextView
+        android:layout_marginTop="100dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/budget"
+        android:textColor="@android:color/white"
+        android:textSize="25dp"
+        android:layout_marginLeft="15dp"
+        android:id="@+id/budget"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="50"
+        android:textColor="@android:color/holo_green_light"
+        android:textSize="25dp"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="15dp"
+        android:id="@+id/budget_rs"
+        android:layout_alignTop="@id/budget" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/expense"
+        android:textColor="@android:color/white"
+        android:textSize="25dp"
+        android:layout_margin="15dp"
+        android:layout_below="@id/budget"
+        android:layout_marginTop="20dp"
+        android:id="@+id/expense"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="25"
+        android:textColor="@android:color/holo_red_light"
+        android:textSize="25dp"
+        android:layout_below="@id/budget"
+        android:layout_alignRight="@id/budget_rs"
+        android:layout_alignTop="@id/expense"
+        android:id="@+id/expense_rs"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="-------------------------"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/expense"
+        android:textSize="25dp"
+        android:id="@+id/dash"
+        android:textColor="@android:color/white"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/savings"
+        android:textColor="@android:color/white"
+        android:textSize="25dp"
+        android:layout_below="@id/dash"
+        android:layout_alignLeft="@id/expense"
+        android:id="@+id/savings"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="25"
+        android:textColor="@android:color/white"
+        android:textSize="25dp"
+        android:layout_below="@id/dash"
+        android:layout_alignRight="@id/expense_rs"
+        android:id="@+id/savings_rs"
+        />
+    <TextView
+        android:layout_marginTop="54dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/sg"
+        android:textColor="@android:color/white"
+        android:textSize="25dp"
+        android:id="@+id/sg"
+        android:layout_below="@+id/savings"
+        android:layout_alignLeft="@+id/savings"
+        android:layout_alignStart="@+id/savings" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="5"
+        android:textColor="@android:color/holo_green_light"
+        android:textSize="25dp"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="15dp"
+        android:id="@+id/sg_rs"
+        android:layout_alignTop="@id/sg"
+        android:layout_below="@id/savings_rs"/>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:text="+ budget"
+        android:id="@+id/button_budget"
+        android:layout_marginLeft="40dp"
+        />
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:text="+ expense"
+        android:id="@+id/button_expense"
+        android:layout_toRightOf="@id/button_budget"
+        />
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:text="+ goal"
+        android:id="@+id/button_goal"
+        android:layout_toRightOf="@id/button_expense" />
+    <Button
+        android:text="Chart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="onChart"
+        android:id="@+id/btn_chart"
+        android:layout_centerHorizontal="true"
+        android:layout_above="@+id/button_expense" />
+</RelativeLayout>

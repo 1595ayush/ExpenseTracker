@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/header_budget"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="30dp"
+        android:text="@string/savingsHeader"
+        android:textSize="35dp"
+        />
+    <TextView
+        android:id="@+id/savingsamt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/header_budget"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="30dp"
+        android:text="@string/amt"
+        android:textSize="25dp"
+        />
+    <EditText
+        android:id="@+id/savingsedt_amt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/header_budget"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="50dp"
+        android:layout_marginTop="20dp"
+        android:layout_toRightOf="@id/savingsamt"
+        android:inputType="numberDecimal"
+        android:text="0.00"
+        android:textSize="25dp"
+        />
+
+
+    <TextView
+        android:id="@+id/savingsstart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/savingsamt"
+        android:layout_below="@id/savingsamt"
+        android:layout_marginTop="30dp"
+        android:text="@string/start"
+        android:textSize="25dp"
+        />
+    <EditText
+        android:id="@+id/savingsedt_start"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/savingsedt_amt"
+        android:layout_below="@id/savingsamt"
+        android:layout_marginRight="50dp"
+        android:layout_marginTop="20dp"
+        android:layout_toRightOf="@id/savingsstart"
+        android:focusable="false"
+        android:textSize="25dp"
+        />
+
+    <TextView
+        android:id="@+id/savingsend"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/savingsamt"
+        android:layout_below="@id/savingsstart"
+        android:layout_marginTop="30dp"
+        android:text="@string/end"
+        android:textSize="25dp"
+        />
+    <EditText
+        android:id="@+id/savingsedt_end"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/savingsedt_amt"
+        android:layout_below="@id/savingsstart"
+        android:layout_marginRight="50dp"
+        android:layout_marginTop="20dp"
+        android:layout_toRightOf="@id/savingsend"
+        android:focusable="false"
+        android:textSize="25dp"
+        />
+
+    <Button
+        android:id="@+id/savingsreset"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/savingsend"
+        android:layout_marginLeft="80dp"
+        android:layout_marginTop="30dp"
+        android:onClick="onReset"
+        android:text="@string/reset"
+        android:textSize="25dp"
+        />
+    <Button
+        android:id="@+id/savingsbutton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/savingsend"
+        android:layout_marginTop="30dp"
+        android:layout_toRightOf="@id/savingsreset"
+        android:onClick="onDone"
+        android:text="@string/ok"
+        android:textSize="25dp" />
+</RelativeLayout>
